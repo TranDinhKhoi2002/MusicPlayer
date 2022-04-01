@@ -29,14 +29,19 @@ class MainActivity : AppCompatActivity() {
         val adapter = SongsAdapter(SongList.songList)
         binding?.rvRecentSong?.adapter = adapter
         binding?.rvFavouriteSong?.adapter = adapter
+        binding?.rvAlbumSong?.adapter = adapter
 
         val layoutRecentSongManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         val layoutFavouriteManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        val layoutAlbumManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding?.rvRecentSong?.layoutManager = layoutRecentSongManager
         binding?.rvFavouriteSong?.layoutManager = layoutFavouriteManager
+        binding?.rvAlbumSong?.layoutManager = layoutAlbumManager
     }
 
     override fun onDestroy() {

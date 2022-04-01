@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.MainActivity"
+    android:scrollbars="none"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main_header"
@@ -135,7 +137,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Album"
+            android:textColor="@color/title_text_color"
+            android:textSize="28sp"
+            app:layout_constraintTop_toBottomOf="@+id/rvFavouriteSong" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlbumSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_album"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
