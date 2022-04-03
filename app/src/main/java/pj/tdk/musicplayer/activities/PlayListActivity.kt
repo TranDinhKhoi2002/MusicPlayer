@@ -1,6 +1,7 @@
 package pj.tdk.musicplayer.activities
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.shape.CornerFamily
@@ -32,9 +33,16 @@ class PlayListActivity : AppCompatActivity() {
 
         binding.rvMusic.layoutManager = layoutRecentSongManager
 
-        val y = binding.appBar.background as MaterialShapeDrawable
-        y.setShapeAppearanceModel(
-            y.getShapeAppearanceModel().toBuilder().setBottomLeftCorner(CornerFamily.ROUNDED, 64f)
+        binding.imgBackArrow.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                //TODO("Not yet implemented")
+                finish()
+            }
+        })
+
+        val cornerBorder = binding.appBar.background as MaterialShapeDrawable
+        cornerBorder.setShapeAppearanceModel(
+            cornerBorder.getShapeAppearanceModel().toBuilder().setBottomLeftCorner(CornerFamily.ROUNDED, 64f)
                 .setBottomRightCorner(CornerFamily.ROUNDED, 64f)
                 .build()
         )

@@ -1,6 +1,8 @@
 package pj.tdk.musicplayer.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import pj.tdk.musicplayer.adapters.SongsAdapter
@@ -32,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         binding?.rvRecentSong?.layoutManager = layoutRecentSongManager
         binding?.rvFavouriteSong?.layoutManager = layoutFavouriteManager
         binding?.rvAlbumSong?.layoutManager = layoutAlbumManager
+
+        binding?.ivMenuSettings?.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View?) {
+                //TODO("Not yet implemented")
+                val intent:Intent= Intent(view?.context, PlayListActivity::class.java)
+                startActivity(intent)
+            }
+        })
     }
 
     override fun onDestroy() {

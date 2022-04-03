@@ -1,11 +1,9 @@
 package pj.tdk.musicplayer.db.history
 
 import androidx.lifecycle.LiveData
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
+@Dao
 interface HistoryDao {
     companion object {
         private const val HISTORY_LIMIT = 100
