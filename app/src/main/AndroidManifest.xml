@@ -19,6 +19,15 @@
         </activity>
 
         <activity
+            android:name=".activities.SongViewActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.PlayListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

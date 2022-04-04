@@ -34,7 +34,7 @@ class PlayListActivity : AppCompatActivity() {
         binding.rvMusic.layoutManager = layoutRecentSongManager
 
         binding.imgBackArrow.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(p0: View?) {
+            override fun onClick(view: View?) {
                 //TODO("Not yet implemented")
                 finish()
             }

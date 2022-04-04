@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding?.ivMenuSettings?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 //TODO("Not yet implemented")
-                val intent:Intent= Intent(view?.context, PlayListActivity::class.java)
+                val intent: Intent = Intent(view?.context, PlayListActivity::class.java)
                 startActivity(intent)
             }
         })

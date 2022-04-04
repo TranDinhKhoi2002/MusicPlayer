@@ -8,4 +8,9 @@
     <dimen name="action_bar_size">80dp</dimen>
     <dimen name="margin_item_music">50dp</dimen>
     <dimen name="margin_top_rv">16dp</dimen>
+
+    <dimen name="corner_radius">30dp</dimen>
+    <dimen name="margin_corner_radius">-30dp</dimen>
+    <dimen name="action_bars_size_corner">110dp</dimen>
+    <dimen name="margin_toolbar">30dp</dimen>
 </resources>
