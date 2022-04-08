@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_delete.xml" value="0.23958333333333334" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_library_add.xml" value="0.121875" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_menu_24.xml" value="0.23958333333333334" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_playlist_add.xml" value="0.23958333333333334" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_redo.xml" value="0.23958333333333334" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_select_all.xml" value="0.23958333333333334" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/ic_storage.xml" value="0.23958333333333334" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/shape_ic_micro_background_rounded.xml" value="0.23958333333333334" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/drawable/shape_search_input_background.xml" value="0.23958333333333334" />
@@ -11,6 +16,8 @@
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/layout/item_song.xml" value="0.4" />
         <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/layout/item_storage.xml" value="0.4" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/menu/menu_item_song.xml" value="0.21927083333333333" />
+        <entry key="..\:/AndroidApp/MusicPlayer/app/src/main/res/menu/menu_media_selection.xml" value="0.4" />
       </map>
     </option>
   </component>
