@@ -12,13 +12,15 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 
 import java.io.File;
 import java.io.IOException;
+
+import code.name.monkey.retromusic.util.ImageUtil;
 
 /**
  * Created on : June 18, 2016 Author : zetbaitsu Name : Zetra GitHub : https://github.com/zetbaitsu

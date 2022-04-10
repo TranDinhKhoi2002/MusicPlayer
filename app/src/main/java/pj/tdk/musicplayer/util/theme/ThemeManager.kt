@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import code.name.monkey.retromusic.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.generalThemeValue
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import code.name.monkey.retromusic.util.theme.ThemeMode.*
 
 object ThemeManager {

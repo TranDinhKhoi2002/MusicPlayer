@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -186,13 +186,13 @@ public class ImageUtil {
     return inSampleSize;
   }
 
-  static File compressImage(
-      File imageFile,
-      int reqWidth,
-      int reqHeight,
-      Bitmap.CompressFormat compressFormat,
-      int quality,
-      String destinationPath)
+  public static File compressImage(
+          File imageFile,
+          int reqWidth,
+          int reqHeight,
+          Bitmap.CompressFormat compressFormat,
+          int quality,
+          String destinationPath)
       throws IOException {
     FileOutputStream fileOutputStream = null;
     File file = new File(destinationPath).getParentFile();
@@ -214,7 +214,7 @@ public class ImageUtil {
     return new File(destinationPath);
   }
 
-  static Bitmap decodeSampledBitmapFromFile(File imageFile, int reqWidth, int reqHeight)
+  public static Bitmap decodeSampledBitmapFromFile(File imageFile, int reqWidth, int reqHeight)
       throws IOException {
     // First decode with inJustDecodeBounds=true to check dimensions
     BitmapFactory.Options options = new BitmapFactory.Options();

@@ -11,7 +11,7 @@
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  */
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.os.Environment
 import android.util.Log
@@ -19,6 +19,7 @@ import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.model.lyrics.AbsSynchronizedLyrics
 import org.jaudiotagger.audio.AudioFileIO
 import org.jaudiotagger.tag.FieldKey
+import pj.tdk.musicplayer.models.Song
 import java.io.*
 
 /**

@@ -1,4 +1,4 @@
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.app.Activity;
 import android.content.Context;

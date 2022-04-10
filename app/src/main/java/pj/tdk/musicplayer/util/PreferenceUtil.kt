@@ -1,4 +1,4 @@
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.net.ConnectivityManager

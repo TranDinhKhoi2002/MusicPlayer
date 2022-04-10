@@ -21,7 +21,7 @@ import android.provider.MediaStore
 import code.name.monkey.retromusic.Constants.NUMBER_OF_TOP_TRACKS
 import code.name.monkey.retromusic.providers.HistoryStore
 import code.name.monkey.retromusic.providers.SongPlayCountStore
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Album
 import pj.tdk.musicplayer.models.Artist
 import pj.tdk.musicplayer.models.Song

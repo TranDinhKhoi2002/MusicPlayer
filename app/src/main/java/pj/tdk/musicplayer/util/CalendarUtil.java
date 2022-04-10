@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

@@ -1,4 +1,4 @@
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator

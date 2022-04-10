@@ -26,7 +26,7 @@ import code.name.monkey.retromusic.network.LastFMService
 import code.name.monkey.retromusic.network.Result.*
 import code.name.monkey.retromusic.network.model.LastFmAlbum
 import code.name.monkey.retromusic.network.model.LastFmArtist
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

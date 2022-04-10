@@ -16,7 +16,7 @@ package pj.tdk.musicplayer.models
 
 import code.name.monkey.retromusic.helper.SortOrder
 import pj.tdk.musicplayer.util.MusicUtil
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import java.text.Collator
 
 data class Artist(

@@ -16,7 +16,7 @@ package pj.tdk.musicplayer.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
 import code.name.monkey.retromusic.helper.SortOrder
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Album
 import pj.tdk.musicplayer.models.Song
 import java.text.Collator

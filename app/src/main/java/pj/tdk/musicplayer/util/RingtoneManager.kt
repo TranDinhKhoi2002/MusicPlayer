@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.content.Context
 import android.content.Intent
@@ -22,10 +22,10 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import code.name.monkey.appthemehelper.util.VersionUtils
-import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.model.Song
 import pj.tdk.musicplayer.util.MusicUtil.getSongFileUri
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import pj.tdk.musicplayer.R
+import pj.tdk.musicplayer.models.Song
 
 class RingtoneManager(val context: Context) {
     fun setRingtone(song: Song) {

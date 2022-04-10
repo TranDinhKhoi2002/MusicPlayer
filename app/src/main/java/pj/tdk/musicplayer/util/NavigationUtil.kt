@@ -11,7 +11,7 @@
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  */
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -20,10 +20,10 @@ import android.content.Intent
 import android.media.audiofx.AudioEffect
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.activities.*
 import code.name.monkey.retromusic.activities.bugreport.BugReportActivity
 import code.name.monkey.retromusic.helper.MusicPlayerRemote.audioSessionId
+import pj.tdk.musicplayer.R
 
 object NavigationUtil {
     fun bugReport(activity: Activity) {

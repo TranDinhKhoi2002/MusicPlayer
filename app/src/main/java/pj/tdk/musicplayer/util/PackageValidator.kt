@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 
 import android.Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE
@@ -29,7 +29,7 @@ import android.util.Base64
 import android.util.Log
 import androidx.annotation.XmlRes
 import androidx.media.MediaBrowserServiceCompat
-import code.name.monkey.retromusic.BuildConfig
+import pj.tdk.musicplayer.BuildConfig
 import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
 import java.security.MessageDigest

@@ -12,10 +12,11 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -34,15 +35,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.db.PlaylistWithSongs;
+import pj.tdk.musicplayer.R;
 import code.name.monkey.retromusic.helper.M3UWriter;
+import pj.tdk.musicplayer.db.playlist.PlaylistWithSongs;
 import pj.tdk.musicplayer.models.Playlist;
 import pj.tdk.musicplayer.models.PlaylistSong;
-import code.name.monkey.retromusic.model.Song;
+import pj.tdk.musicplayer.models.Song;
 
 public class PlaylistsUtil {
 
+  @SuppressLint("Range")
   public static long createPlaylist(@NonNull final Context context, @Nullable final String name) {
     int id = -1;
     if (name != null && name.length() > 0) {

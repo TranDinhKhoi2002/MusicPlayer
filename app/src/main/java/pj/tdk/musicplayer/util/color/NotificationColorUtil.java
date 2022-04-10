@@ -37,7 +37,7 @@ import androidx.core.content.ContextCompat;
 
 import java.util.WeakHashMap;
 
-import code.name.monkey.retromusic.R;
+import pj.tdk.musicplayer.R;
 import pj.tdk.musicplayer.util.color.ImageUtils;
 
 /**

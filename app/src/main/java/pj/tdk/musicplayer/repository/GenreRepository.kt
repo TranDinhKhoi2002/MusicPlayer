@@ -21,7 +21,7 @@ import android.provider.MediaStore.Audio.Genres
 import code.name.monkey.retromusic.Constants.IS_MUSIC
 import code.name.monkey.retromusic.Constants.baseProjection
 import code.name.monkey.retromusic.extensions.getStringOrNull
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Genre
 import pj.tdk.musicplayer.models.Song
 

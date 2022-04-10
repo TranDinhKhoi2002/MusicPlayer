@@ -16,7 +16,7 @@ package pj.tdk.musicplayer.repository
 
 import android.database.Cursor
 import android.provider.MediaStore
-import code.name.monkey.retromusic.util.PreferenceUtil
+import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Album
 import pj.tdk.musicplayer.models.Artist
 import pj.tdk.musicplayer.models.Song

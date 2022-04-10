@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -40,10 +40,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import code.name.monkey.retromusic.adapter.Storage;
-import code.name.monkey.retromusic.model.Song;
+import pj.tdk.musicplayer.adapters.Storage;
+import pj.tdk.musicplayer.models.Song;
 import pj.tdk.musicplayer.repository.RealSongRepository;
-import code.name.monkey.retromusic.repository.SortedCursor;
+import pj.tdk.musicplayer.repository.SortedCursor;
 
 public final class FileUtil {
 

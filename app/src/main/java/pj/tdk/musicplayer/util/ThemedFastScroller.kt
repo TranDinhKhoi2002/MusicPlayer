@@ -11,7 +11,7 @@
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  */
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.view.ViewGroup
 import code.name.monkey.appthemehelper.ThemeStore.Companion.accentColor
@@ -23,6 +23,7 @@ import me.zhanghai.android.fastscroll.FastScroller
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import me.zhanghai.android.fastscroll.PopupStyles
 import me.zhanghai.android.fastscroll.R
+import pj.tdk.musicplayer.util.color.NotificationColorUtil.isColorLight
 
 object ThemedFastScroller {
     fun create(view: ViewGroup): FastScroller {
