@@ -1,10 +1,11 @@
-package code.name.monkey.retromusic.model.smartplaylist
+package pj.tdk.musicplayer.models.smartplaylist
 
-import code.name.monkey.retromusic.App
-import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.model.Song
 import kotlinx.parcelize.Parcelize
 import org.koin.core.component.KoinComponent
+import pj.tdk.musicplayer.App
+import pj.tdk.musicplayer.R
+import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.models.smartplaylist.AbsSmartPlaylist
 
 @Parcelize
 class HistoryPlaylist : AbsSmartPlaylist(

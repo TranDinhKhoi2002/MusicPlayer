@@ -19,8 +19,9 @@ import android.database.Cursor
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.AudioColumns.IS_MUSIC
 import android.provider.MediaStore.Audio.Playlists.Members
-import code.name.monkey.retromusic.Constants.IS_MUSIC
-import code.name.monkey.retromusic.extensions.getStringOrNull
+import androidx.core.database.getStringOrNull
+import pj.tdk.musicplayer.Constants.IS_MUSICs
+import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.models.AbsCustomPlaylist
 import pj.tdk.musicplayer.models.Playlist
 import pj.tdk.musicplayer.models.PlaylistSong
@@ -80,8 +81,8 @@ object PlaylistSongsLoader {
         val artistId = cursor.getLong(AudioColumns.ARTIST_ID.toInt())
         val artistName = cursor.getString(AudioColumns.ARTIST.toInt())
         val idInPlaylist = cursor.getLong(Members._ID.toInt())
-        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER)
-        val albumArtist = cursor.getStringOrNull("album_artist")
+        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER.toInt())
+        val albumArtist = cursor.getStringOrNull("album_artist".toInt())
         return PlaylistSong(
             id,
             title,
@@ -120,7 +121,7 @@ object PlaylistSongsLoader {
                     Members._ID,//11
                     AudioColumns.COMPOSER,//12
                     "album_artist"//13
-                ), IS_MUSIC, null, Members.DEFAULT_SORT_ORDER
+                ), IS_MUSICs, null, Members.DEFAULT_SORT_ORDER
             )
         } catch (e: SecurityException) {
             return null

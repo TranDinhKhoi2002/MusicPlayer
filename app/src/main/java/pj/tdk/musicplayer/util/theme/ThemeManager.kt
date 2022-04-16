@@ -1,12 +1,12 @@
-package code.name.monkey.retromusic.util.theme
+package pj.tdk.musicplayer.util.theme
 
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatDelegate
 import code.name.monkey.retromusic.App
-import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.generalThemeValue
 import pj.tdk.musicplayer.util.PreferenceUtil
-import code.name.monkey.retromusic.util.theme.ThemeMode.*
+import pj.tdk.musicplayer.util.theme.ThemeMode.*
+import pj.tdk.musicplayer.R
 
 object ThemeManager {
 

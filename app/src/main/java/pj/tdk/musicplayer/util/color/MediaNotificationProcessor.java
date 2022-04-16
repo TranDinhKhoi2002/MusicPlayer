@@ -32,7 +32,9 @@ import androidx.annotation.NonNull;
 import androidx.palette.graphics.Palette;
 
 import java.util.List;
-import code.name.monkey.retromusic.util.ColorUtil;
+
+import pj.tdk.musicplayer.R;
+import pj.tdk.musicplayer.util.ColorUtil;
 
 /** A class the processes media notifications and extracts the right text and background colors. */
 public class MediaNotificationProcessor {
@@ -373,51 +375,51 @@ public class MediaNotificationProcessor {
 
   private void ensureColors(int backgroundColor, int mForegroundColor) {
     {
-      double backLum = code.name.monkey.retromusic.util.color.NotificationColorUtil.calculateLuminance(backgroundColor);
-      double textLum = code.name.monkey.retromusic.util.color.NotificationColorUtil.calculateLuminance(mForegroundColor);
-      double contrast = code.name.monkey.retromusic.util.color.NotificationColorUtil.calculateContrast(mForegroundColor, backgroundColor);
+      double backLum = pj.tdk.musicplayer.util.color.NotificationColorUtil.calculateLuminance(backgroundColor);
+      double textLum = pj.tdk.musicplayer.util.color.NotificationColorUtil.calculateLuminance(mForegroundColor);
+      double contrast = pj.tdk.musicplayer.util.color.NotificationColorUtil.calculateContrast(mForegroundColor, backgroundColor);
       // We only respect the given colors if worst case Black or White still has
       // contrast
       boolean backgroundLight =
           backLum > textLum
-                  && code.name.monkey.retromusic.util.color.NotificationColorUtil.satisfiesTextContrast(backgroundColor, Color.BLACK)
+                  && pj.tdk.musicplayer.util.color.NotificationColorUtil.satisfiesTextContrast(backgroundColor, Color.BLACK)
               || backLum <= textLum
-                  && !code.name.monkey.retromusic.util.color.NotificationColorUtil.satisfiesTextContrast(backgroundColor, Color.WHITE);
+                  && !pj.tdk.musicplayer.util.color.NotificationColorUtil.satisfiesTextContrast(backgroundColor, Color.WHITE);
       if (contrast < 4.5f) {
         if (backgroundLight) {
           secondaryTextColor =
-              code.name.monkey.retromusic.util.color.NotificationColorUtil.findContrastColor(
+              pj.tdk.musicplayer.util.color.NotificationColorUtil.findContrastColor(
                   mForegroundColor, backgroundColor, true /* findFG */, 4.5f);
           primaryTextColor =
-              code.name.monkey.retromusic.util.color.NotificationColorUtil.changeColorLightness(
+              pj.tdk.musicplayer.util.color.NotificationColorUtil.changeColorLightness(
                   secondaryTextColor, -LIGHTNESS_TEXT_DIFFERENCE_LIGHT);
         } else {
           secondaryTextColor =
-              code.name.monkey.retromusic.util.color.NotificationColorUtil.findContrastColorAgainstDark(
+              pj.tdk.musicplayer.util.color.NotificationColorUtil.findContrastColorAgainstDark(
                   mForegroundColor, backgroundColor, true /* findFG */, 4.5f);
           primaryTextColor =
-              code.name.monkey.retromusic.util.color.NotificationColorUtil.changeColorLightness(
+              pj.tdk.musicplayer.util.color.NotificationColorUtil.changeColorLightness(
                   secondaryTextColor, -LIGHTNESS_TEXT_DIFFERENCE_DARK);
         }
       } else {
         primaryTextColor = mForegroundColor;
         secondaryTextColor =
-            code.name.monkey.retromusic.util.color.NotificationColorUtil.changeColorLightness(
+            pj.tdk.musicplayer.util.color.NotificationColorUtil.changeColorLightness(
                 primaryTextColor,
                 backgroundLight ? LIGHTNESS_TEXT_DIFFERENCE_LIGHT : LIGHTNESS_TEXT_DIFFERENCE_DARK);
-        if (code.name.monkey.retromusic.util.color.NotificationColorUtil.calculateContrast(secondaryTextColor, backgroundColor) < 4.5f) {
+        if (pj.tdk.musicplayer.util.color.NotificationColorUtil.calculateContrast(secondaryTextColor, backgroundColor) < 4.5f) {
           // oh well the secondary is not good enough
           if (backgroundLight) {
             secondaryTextColor =
-                code.name.monkey.retromusic.util.color.NotificationColorUtil.findContrastColor(
+                pj.tdk.musicplayer.util.color.NotificationColorUtil.findContrastColor(
                     secondaryTextColor, backgroundColor, true /* findFG */, 4.5f);
           } else {
             secondaryTextColor =
-                code.name.monkey.retromusic.util.color.NotificationColorUtil.findContrastColorAgainstDark(
+                pj.tdk.musicplayer.util.color.NotificationColorUtil.findContrastColorAgainstDark(
                     secondaryTextColor, backgroundColor, true /* findFG */, 4.5f);
           }
           primaryTextColor =
-              code.name.monkey.retromusic.util.color.NotificationColorUtil.changeColorLightness(
+              pj.tdk.musicplayer.util.color.NotificationColorUtil.changeColorLightness(
                   secondaryTextColor,
                   backgroundLight
                       ? -LIGHTNESS_TEXT_DIFFERENCE_LIGHT
@@ -425,7 +427,7 @@ public class MediaNotificationProcessor {
         }
       }
     }
-    actionBarColor = code.name.monkey.retromusic.util.color.NotificationColorUtil.resolveActionBarColor(context, backgroundColor);
+    actionBarColor = pj.tdk.musicplayer.util.color.NotificationColorUtil.resolveActionBarColor(context, backgroundColor);
   }
 
   public int getPrimaryTextColor() {

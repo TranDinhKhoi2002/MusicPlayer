@@ -13,7 +13,6 @@ import com.afollestad.materialcab.attached.AttachedCab
 import com.afollestad.materialcab.attached.destroy
 import com.afollestad.materialcab.attached.isActive
 import pj.tdk.musicplayer.R
-import pj.tdk.musicplayer.util.RetroColorUtil
 
 abstract class AbsMultiSelectAdapter<V : RecyclerView.ViewHolder?, I>(
     open val activity: FragmentActivity, private val ICabHolder: ICabHolder?, @MenuRes menuRes: Int

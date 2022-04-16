@@ -18,7 +18,7 @@ import code.name.monkey.appthemehelper.util.VersionUtils
 import pj.tdk.musicplayer.db.playlist.PlaylistEntity
 import pj.tdk.musicplayer.db.song.SongEntity
 import pj.tdk.musicplayer.db.song.toSongEntity
-import code.name.monkey.retromusic.helper.MusicPlayerRemote.removeFromQueue
+import pj.tdk.musicplayer.helper.MusicPlayerRemote.removeFromQueue
 import pj.tdk.musicplayer.models.Artist
 import pj.tdk.musicplayer.models.Playlist
 import pj.tdk.musicplayer.model.lyrics.AbsSynchronizedLyrics

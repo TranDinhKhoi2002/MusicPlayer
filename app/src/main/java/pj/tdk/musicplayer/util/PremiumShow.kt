@@ -1,10 +1,10 @@
-package code.name.monkey.retromusic.util
+package pj.tdk.musicplayer.util
 
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.ActivityCompat
-import code.name.monkey.retromusic.App
 import code.name.monkey.retromusic.activities.PurchaseActivity
+import pj.tdk.musicplayer.App
 
 object PremiumShow {
     private const val PREF_NAME = "premium_show"

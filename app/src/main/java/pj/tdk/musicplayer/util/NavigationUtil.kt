@@ -22,7 +22,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import code.name.monkey.retromusic.activities.*
 import code.name.monkey.retromusic.activities.bugreport.BugReportActivity
-import code.name.monkey.retromusic.helper.MusicPlayerRemote.audioSessionId
+import pj.tdk.musicplayer.helper.MusicPlayerRemote.audioSessionId
 import pj.tdk.musicplayer.R
 
 object NavigationUtil {

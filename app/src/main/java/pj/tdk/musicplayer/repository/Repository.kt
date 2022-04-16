@@ -21,7 +21,7 @@ import code.name.monkey.retromusic.*
 import pj.tdk.musicplayer.db.*
 import code.name.monkey.retromusic.fragments.search.Filter
 import code.name.monkey.retromusic.model.*
-import code.name.monkey.retromusic.model.smartplaylist.NotPlayedPlaylist
+import pj.tdk.musicplayer.models.smartplaylist.NotPlayedPlaylist
 import code.name.monkey.retromusic.network.LastFMService
 import code.name.monkey.retromusic.network.Result.*
 import code.name.monkey.retromusic.network.model.LastFmAlbum

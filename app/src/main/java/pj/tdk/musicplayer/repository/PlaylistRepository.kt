@@ -20,6 +20,7 @@ import android.provider.BaseColumns
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Playlists.*
 import android.provider.MediaStore.Audio.PlaylistsColumns
+import androidx.core.database.getStringOrNull
 import pj.tdk.musicplayer.Constants
 import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.models.Playlist
@@ -152,8 +153,8 @@ class RealPlaylistRepository(
         val artistId = cursor.getLong(AudioColumns.ARTIST_ID.toInt())
         val artistName = cursor.getString(AudioColumns.ARTIST.toInt())
         val idInPlaylist = cursor.getLong(Members._ID.toInt())
-        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER)
-        val albumArtist = cursor.getStringOrNull("album_artist")
+        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER.toInt())
+        val albumArtist = cursor.getStringOrNull("album_artist".toInt())
         return PlaylistSong(
             id,
             title,

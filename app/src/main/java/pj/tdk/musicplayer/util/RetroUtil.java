@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -50,6 +50,7 @@ import java.util.List;
 
 import code.name.monkey.appthemehelper.util.TintHelper;
 import code.name.monkey.retromusic.App;
+import pj.tdk.musicplayer.App;
 import pj.tdk.musicplayer.util.PreferenceUtil;
 
 public class RetroUtil {

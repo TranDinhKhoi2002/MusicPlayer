@@ -1,4 +1,4 @@
-package code.name.monkey.retromusic.model.smartplaylist
+package pj.tdk.musicplayer.models.smartplaylist
 
 import androidx.annotation.DrawableRes
 import kotlin.math.abs

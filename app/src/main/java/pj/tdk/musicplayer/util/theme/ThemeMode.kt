@@ -1,4 +1,4 @@
-package code.name.monkey.retromusic.util.theme
+package pj.tdk.musicplayer.util.theme
 
 enum class ThemeMode {
     LIGHT,

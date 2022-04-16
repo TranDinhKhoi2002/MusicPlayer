@@ -3,6 +3,8 @@ package pj.tdk.musicplayer.util
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
+import android.preference.PreferenceManager
+import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.util.VersionUtils
@@ -13,15 +15,16 @@ import code.name.monkey.retromusic.fragments.AlbumCoverStyle
 import code.name.monkey.retromusic.fragments.GridStyle
 import code.name.monkey.retromusic.fragments.NowPlayingScreen
 import code.name.monkey.retromusic.fragments.folder.FoldersFragment
-import code.name.monkey.retromusic.helper.SortOrder.*
+import pj.tdk.musicplayer.helper.SortOrder.*
 import pj.tdk.musicplayer.models.CategoryInfo
 import code.name.monkey.retromusic.transform.*
-import code.name.monkey.retromusic.util.theme.ThemeMode
+import pj.tdk.musicplayer.util.theme.ThemeMode
 import code.name.monkey.retromusic.views.TopAppBarLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
+import pj.tdk.musicplayer.*
 import java.io.File
 
 

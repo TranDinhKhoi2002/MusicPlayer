@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package code.name.monkey.retromusic.util;
+package pj.tdk.musicplayer.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -42,8 +42,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Song;
+import pj.tdk.musicplayer.R;
+import pj.tdk.musicplayer.models.Song;
 import pj.tdk.musicplayer.util.FileUtil;
 import pj.tdk.musicplayer.util.PreferenceUtil;
 

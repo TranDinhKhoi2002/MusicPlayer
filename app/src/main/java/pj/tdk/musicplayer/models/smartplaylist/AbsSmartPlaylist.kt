@@ -1,7 +1,8 @@
-package code.name.monkey.retromusic.model.smartplaylist
+package pj.tdk.musicplayer.models.smartplaylist
 
 import androidx.annotation.DrawableRes
-import code.name.monkey.retromusic.R
+import pj.tdk.musicplayer.models.smartplaylist.PlaylistIdGenerator
+import pj.tdk.musicplayer.R
 import pj.tdk.musicplayer.models.AbsCustomPlaylist
 
 abstract class AbsSmartPlaylist(

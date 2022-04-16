@@ -23,12 +23,12 @@ import android.net.Uri
 import android.os.AsyncTask
 import android.provider.MediaStore
 import android.widget.Toast
-import code.name.monkey.retromusic.App
 import pj.tdk.musicplayer.models.Artist
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
+import pj.tdk.musicplayer.App
 import java.io.BufferedOutputStream
 import java.io.File
 import java.io.FileOutputStream

@@ -20,7 +20,7 @@ import android.graphics.Bitmap;
 import java.io.File;
 import java.io.IOException;
 
-import code.name.monkey.retromusic.util.ImageUtil;
+import pj.tdk.musicplayer.util.ImageUtil;
 
 /**
  * Created on : June 18, 2016 Author : zetbaitsu Name : Zetra GitHub : https://github.com/zetbaitsu
