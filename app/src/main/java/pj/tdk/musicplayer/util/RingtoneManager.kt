@@ -17,10 +17,12 @@ package pj.tdk.musicplayer.util
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.provider.BaseColumns
 import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import code.name.monkey.appthemehelper.util.VersionUtils
 import pj.tdk.musicplayer.util.MusicUtil.getSongFileUri
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -63,6 +65,7 @@ class RingtoneManager(val context: Context) {
             return false
         }
 
+        @RequiresApi(Build.VERSION_CODES.M)
         fun getDialog(context: Context) {
             return MaterialAlertDialogBuilder(context, R.style.MaterialAlertDialogTheme)
                 .setTitle(R.string.dialog_title_set_ringtone)

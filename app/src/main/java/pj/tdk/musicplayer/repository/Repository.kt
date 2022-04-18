@@ -17,16 +17,12 @@ package pj.tdk.musicplayer.repository
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import code.name.monkey.retromusic.*
-import pj.tdk.musicplayer.db.*
 import code.name.monkey.retromusic.fragments.search.Filter
-import code.name.monkey.retromusic.model.*
-import pj.tdk.musicplayer.models.smartplaylist.NotPlayedPlaylist
 import code.name.monkey.retromusic.network.LastFMService
 import code.name.monkey.retromusic.network.Result.*
 import code.name.monkey.retromusic.network.model.LastFmAlbum
 import code.name.monkey.retromusic.network.model.LastFmArtist
-import pj.tdk.musicplayer.util.PreferenceUtil
+import code.name.monkey.retromusic.repository.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -38,8 +34,12 @@ import pj.tdk.musicplayer.db.playcount.PlayCountEntity
 import pj.tdk.musicplayer.db.playlist.PlaylistEntity
 import pj.tdk.musicplayer.db.playlist.PlaylistWithSongs
 import pj.tdk.musicplayer.db.song.SongEntity
+import pj.tdk.musicplayer.db.song.fromHistoryToSongs
+import pj.tdk.musicplayer.db.song.toSong
 import pj.tdk.musicplayer.models.*
+import pj.tdk.musicplayer.models.smartplaylist.NotPlayedPlaylist
 import pj.tdk.musicplayer.repository.*
+import pj.tdk.musicplayer.util.PreferenceUtil
 
 interface Repository {
 

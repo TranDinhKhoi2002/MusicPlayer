@@ -20,20 +20,20 @@ abstract class AbsMultiSelectAdapter<V : RecyclerView.ViewHolder?, I>(
     private var cab: AttachedCab? = null
     private val checked: MutableList<I>
     private var menuRes: Int
-    override fun onCabCreated(cab: AttachedCab, menu: Menu): Boolean {
-        activity.window.statusBarColor =
-            RetroColorUtil.shiftBackgroundColor(activity.surfaceColor())
-        return true
-    }
+//    override fun onCabCreated(cab: AttachedCab, menu: Menu): Boolean {
+//        activity.window.statusBarColor =
+//            RetroColorUtil.shiftBackgroundColor(activity.surfaceColor())
+//        return true
+//    }
 
-    override fun onCabFinished(cab: AttachedCab): Boolean {
-        clearChecked()
-        activity.window.statusBarColor = when {
-            VersionUtils.hasMarshmallow() -> Color.TRANSPARENT
-            else -> Color.BLACK
-        }
-        return true
-    }
+//    override fun onCabFinished(cab: AttachedCab): Boolean {
+//        clearChecked()
+//        activity.window.statusBarColor = when {
+//            VersionUtils.hasMarshmallow() -> Color.TRANSPARENT
+//            else -> Color.BLACK
+//        }
+//        return true
+//    }
 
     override fun onCabItemClicked(item: MenuItem): Boolean {
         if (item.itemId == R.id.action_multi_select_adapter_check_all) {

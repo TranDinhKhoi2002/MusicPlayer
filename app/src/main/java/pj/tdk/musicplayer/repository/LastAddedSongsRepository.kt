@@ -16,10 +16,10 @@ package pj.tdk.musicplayer.repository
 
 import android.database.Cursor
 import android.provider.MediaStore
-import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Album
 import pj.tdk.musicplayer.models.Artist
 import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.util.PreferenceUtil
 
 /**
  * Created by hemanths on 16/08/17.

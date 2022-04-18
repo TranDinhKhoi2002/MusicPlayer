@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  *
  */
-package code.name.monkey.retromusic.helper.menu
+package pj.tdk.musicplayer.helper.menu
 
 import android.content.Intent
 import android.view.MenuItem
@@ -21,24 +21,17 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
-import code.name.monkey.retromusic.App
-import code.name.monkey.retromusic.EXTRA_ALBUM_ID
-import code.name.monkey.retromusic.EXTRA_ARTIST_ID
-import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.activities.tageditor.AbsTagEditorActivity
 import code.name.monkey.retromusic.activities.tageditor.SongTagEditorActivity
-import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog
+import pj.tdk.musicplayer.dialogs.AddToPlaylistDialog
 import code.name.monkey.retromusic.dialogs.DeleteSongsDialog
 import code.name.monkey.retromusic.dialogs.SongDetailDialog
 import code.name.monkey.retromusic.fragments.LibraryViewModel
 import code.name.monkey.retromusic.fragments.ReloadType
 import pj.tdk.musicplayer.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IPaletteColorHolder
-import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.providers.BlacklistStore
-import code.name.monkey.retromusic.repository.RealRepository
-import code.name.monkey.retromusic.util.MusicUtil
-import code.name.monkey.retromusic.util.RingtoneManager
+import pj.tdk.musicplayer.repository.RealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -46,6 +39,13 @@ import kotlinx.coroutines.withContext
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
+import pj.tdk.musicplayer.App
+import pj.tdk.musicplayer.EXTRA_ALBUM_ID
+import pj.tdk.musicplayer.EXTRA_ARTIST_ID
+import pj.tdk.musicplayer.R
+import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.util.MusicUtil
+import pj.tdk.musicplayer.util.RingtoneManager
 import java.io.File
 
 object SongMenuHelper : KoinComponent {
@@ -94,17 +94,17 @@ object SongMenuHelper : KoinComponent {
                 MusicPlayerRemote.enqueue(song)
                 return true
             }
-            R.id.action_tag_editor -> {
-                val tagEditorIntent = Intent(activity, SongTagEditorActivity::class.java)
-                tagEditorIntent.putExtra(AbsTagEditorActivity.EXTRA_ID, song.id)
-                if (activity is IPaletteColorHolder)
-                    tagEditorIntent.putExtra(
-                        AbsTagEditorActivity.EXTRA_PALETTE,
-                        (activity as IPaletteColorHolder).paletteColor
-                    )
-                activity.startActivity(tagEditorIntent)
-                return true
-            }
+//            R.id.action_tag_editor -> {
+//                val tagEditorIntent = Intent(activity, SongTagEditorActivity::class.java)
+//                tagEditorIntent.putExtra(AbsTagEditorActivity.EXTRA_ID, song.id)
+//                if (activity is IPaletteColorHolder)
+//                    tagEditorIntent.putExtra(
+//                        AbsTagEditorActivity.EXTRA_PALETTE,
+//                        (activity as IPaletteColorHolder).paletteColor
+//                    )
+//                activity.startActivity(tagEditorIntent)
+//                return true
+//            }
             R.id.action_details -> {
                 SongDetailDialog.create(song).show(activity.supportFragmentManager, "SONG_DETAILS")
                 return true

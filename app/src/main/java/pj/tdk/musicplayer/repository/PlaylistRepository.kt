@@ -20,9 +20,8 @@ import android.provider.BaseColumns
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Playlists.*
 import android.provider.MediaStore.Audio.PlaylistsColumns
-import androidx.core.database.getStringOrNull
+import code.name.monkey.retromusic.extensions.getStringOrNull
 import pj.tdk.musicplayer.Constants
-import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.models.Playlist
 import pj.tdk.musicplayer.models.PlaylistSong
 import pj.tdk.musicplayer.models.Song
@@ -141,20 +140,20 @@ class RealPlaylistRepository(
     }
 
     private fun getPlaylistSongFromCursorImpl(cursor: Cursor, playlistId: Long): PlaylistSong {
-        val id = cursor.getLong(Members.AUDIO_ID.toInt())
-        val title = cursor.getString(AudioColumns.TITLE.toInt())
-        val trackNumber = cursor.getInt(AudioColumns.TRACK.toInt())
-        val year = cursor.getInt(AudioColumns.YEAR.toInt())
-        val duration = cursor.getLong(AudioColumns.DURATION.toInt())
-        val data = cursor.getString(AudioColumns.DATA.toInt())
-        val dateModified = cursor.getLong(AudioColumns.DATE_MODIFIED.toInt())
-        val albumId = cursor.getLong(AudioColumns.ALBUM_ID.toInt())
-        val albumName = cursor.getString(AudioColumns.ALBUM.toInt())
-        val artistId = cursor.getLong(AudioColumns.ARTIST_ID.toInt())
-        val artistName = cursor.getString(AudioColumns.ARTIST.toInt())
-        val idInPlaylist = cursor.getLong(Members._ID.toInt())
-        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER.toInt())
-        val albumArtist = cursor.getStringOrNull("album_artist".toInt())
+        val id = cursor.getLong(Members.AUDIO_ID)
+        val title = cursor.getString(AudioColumns.TITLE)
+        val trackNumber = cursor.getInt(AudioColumns.TRACK)
+        val year = cursor.getInt(AudioColumns.YEAR)
+        val duration = cursor.getLong(AudioColumns.DURATION)
+        val data = cursor.getString(AudioColumns.DATA)
+        val dateModified = cursor.getLong(AudioColumns.DATE_MODIFIED)
+        val albumId = cursor.getLong(AudioColumns.ALBUM_ID)
+        val albumName = cursor.getString(AudioColumns.ALBUM)
+        val artistId = cursor.getLong(AudioColumns.ARTIST_ID)
+        val artistName = cursor.getString(AudioColumns.ARTIST)
+        val idInPlaylist = cursor.getLong(Members._ID)
+        val composer = cursor.getStringOrNull(AudioColumns.COMPOSER)
+        val albumArtist = cursor.getStringOrNull("album_artist")
         return PlaylistSong(
             id,
             title,
@@ -209,7 +208,7 @@ class RealPlaylistRepository(
                 Members._ID,//11
                 AudioColumns.COMPOSER,//12
                 "album_artist"//13
-            ), Constants.IS_MUSIC, null, Members.DEFAULT_SORT_ORDER
+            ), Constants.IS_MUSICs, null, Members.DEFAULT_SORT_ORDER
         )
     }
 }

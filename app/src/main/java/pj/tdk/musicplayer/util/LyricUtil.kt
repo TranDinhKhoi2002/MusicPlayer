@@ -15,7 +15,6 @@ package pj.tdk.musicplayer.util
 
 import android.os.Environment
 import android.util.Log
-import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.model.lyrics.AbsSynchronizedLyrics
 import org.jaudiotagger.audio.AudioFileIO
 import org.jaudiotagger.tag.FieldKey

@@ -16,9 +16,9 @@ package pj.tdk.musicplayer.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
 import pj.tdk.musicplayer.helper.SortOrder
-import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Album
 import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.util.PreferenceUtil
 import java.text.Collator
 
 

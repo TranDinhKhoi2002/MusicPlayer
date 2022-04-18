@@ -17,14 +17,13 @@ package pj.tdk.musicplayer.repository
 import android.content.ContentResolver
 import android.database.Cursor
 import android.provider.BaseColumns
+import android.provider.MediaStore.Audio.AudioColumns.IS_MUSIC
 import android.provider.MediaStore.Audio.Genres
-import androidx.core.database.getStringOrNull
-import pj.tdk.musicplayer.Constants.IS_MUSICs
+import code.name.monkey.retromusic.extensions.getStringOrNull
 import pj.tdk.musicplayer.Constants.baseProjection
-import pj.tdk.musicplayer.extensions.getStringOrNull
-import pj.tdk.musicplayer.util.PreferenceUtil
 import pj.tdk.musicplayer.models.Genre
 import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.util.PreferenceUtil
 
 interface GenreRepository {
     fun genres(query: String): List<Genre>
@@ -74,8 +73,8 @@ class RealGenreRepository(
     }
 
     private fun getGenreFromCursor(cursor: Cursor): Genre {
-        val id = cursor.getLong(Genres._ID.toInt())
-        val name = cursor.getStringOrNull(Genres.NAME.toInt())
+        val id = cursor.getLong(Genres._ID)
+        val name = cursor.getStringOrNull(Genres.NAME)
         val songCount = getSongCount(id)
         return Genre(id, name ?: "", songCount)
     }
@@ -91,7 +90,7 @@ class RealGenreRepository(
             contentResolver.query(
                 Genres.Members.getContentUri("external", genreId),
                 baseProjection,
-                IS_MUSICs,
+                IS_MUSIC,
                 null,
                 PreferenceUtil.songSortOrder
             )

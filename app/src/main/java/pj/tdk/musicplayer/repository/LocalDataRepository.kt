@@ -1,4 +1,4 @@
-package pj.tdk.musicplayer.repository
+package code.name.monkey.retromusic.repository
 
 import android.content.Context
 import com.google.gson.GsonBuilder

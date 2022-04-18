@@ -20,16 +20,15 @@ import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import android.provider.MediaStore.Audio.AudioColumns
-import android.provider.MediaStore.Audio.AudioColumns.IS_MUSIC
 import android.provider.MediaStore.Audio.Media
-import androidx.core.database.getStringOrNull
 import code.name.monkey.appthemehelper.util.VersionUtils
-import pj.tdk.musicplayer.Constants.baseProjection
 import code.name.monkey.retromusic.extensions.getStringOrNull
-import pj.tdk.musicplayer.helper.SortOrder
 import code.name.monkey.retromusic.providers.BlacklistStore
-import pj.tdk.musicplayer.util.PreferenceUtil
+import pj.tdk.musicplayer.Constants.IS_MUSICs
+import pj.tdk.musicplayer.Constants.baseProjection
+import pj.tdk.musicplayer.helper.SortOrder
 import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.util.PreferenceUtil
 import java.text.Collator
 
 /**
@@ -130,7 +129,7 @@ class RealSongRepository(private val context: Context) : SongRepository {
             if (cursor != null) {
                 if (cursor.count != 0) {
                     cursor.moveToFirst()
-                    filePath = cursor.getString(AudioColumns.DATA.toInt())
+                    filePath = cursor.getString(AudioColumns.DATA)
                     println("File Path: $filePath")
                 }
             }
@@ -143,16 +142,16 @@ class RealSongRepository(private val context: Context) : SongRepository {
     private fun getSongFromCursorImpl(
         cursor: Cursor
     ): Song {
-        val id = cursor.getLong(AudioColumns._ID.toInt())
-        val title = cursor.getString(AudioColumns.TITLE.toInt()
+        val id = cursor.getLong(AudioColumns._ID)
+        val title = cursor.getString(AudioColumns.TITLE)
         val trackNumber = cursor.getInt(AudioColumns.TRACK)
-        val year = cursor.getInt(AudioColumns.YEAR.toInt())
-        val duration = cursor.getLong(AudioColumns.DURATION.toInt())
-        val data = cursor.getString(AudioColumns.DATA.toInt())
-        val dateModified = cursor.getLong(AudioColumns.DATE_MODIFIED.toInt())
-        val albumId = cursor.getLong(AudioColumns.ALBUM_ID.toInt())
+        val year = cursor.getInt(AudioColumns.YEAR)
+        val duration = cursor.getLong(AudioColumns.DURATION)
+        val data = cursor.getString(AudioColumns.DATA)
+        val dateModified = cursor.getLong(AudioColumns.DATE_MODIFIED)
+        val albumId = cursor.getLong(AudioColumns.ALBUM_ID)
         val albumName = cursor.getStringOrNull(AudioColumns.ALBUM)
-        val artistId = cursor.getLong(AudioColumns.ARTIST_ID.toInt())
+        val artistId = cursor.getLong(AudioColumns.ARTIST_ID)
         val artistName = cursor.getStringOrNull(AudioColumns.ARTIST)
         val composer = cursor.getStringOrNull(AudioColumns.COMPOSER)
         val albumArtist = cursor.getStringOrNull("album_artist")
@@ -184,9 +183,9 @@ class RealSongRepository(private val context: Context) : SongRepository {
         var selectionValuesFinal = selectionValues
         if (!ignoreBlacklist) {
             selectionFinal = if (selection != null && selection.trim { it <= ' ' } != "") {
-                "$IS_MUSIC AND $selectionFinal"
+                "$IS_MUSICs AND $selectionFinal"
             } else {
-                IS_MUSIC
+                IS_MUSICs
             }
 
             // Whitelist

@@ -16,13 +16,8 @@ package pj.tdk.musicplayer.helper.menu
 
 import android.view.MenuItem
 import androidx.fragment.app.FragmentActivity
-import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog
+import pj.tdk.musicplayer.dialogs.AddToPlaylistDialog
 import pj.tdk.musicplayer.helper.MusicPlayerRemote
-import code.name.monkey.retromusic.model.Genre
-import code.name.monkey.retromusic.model.Song
-import code.name.monkey.retromusic.repository.GenreRepository
-import code.name.monkey.retromusic.repository.RealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,6 +25,11 @@ import kotlinx.coroutines.withContext
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
 import org.koin.core.component.inject
+import pj.tdk.musicplayer.R
+import pj.tdk.musicplayer.models.Genre
+import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.repository.GenreRepository
+import pj.tdk.musicplayer.repository.RealRepository
 
 object GenreMenuHelper : KoinComponent {
     private val genreRepository by inject<GenreRepository>()

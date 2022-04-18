@@ -12,21 +12,21 @@
  * See the GNU General Public License for more details.
  *
  */
-package code.name.monkey.retromusic.helper.menu
+package pj.tdk.musicplayer.helper.menu
 
 import androidx.fragment.app.FragmentActivity
-import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog
+import pj.tdk.musicplayer.dialogs.AddToPlaylistDialog
 import code.name.monkey.retromusic.dialogs.DeleteSongsDialog
 import pj.tdk.musicplayer.helper.MusicPlayerRemote
-import code.name.monkey.retromusic.model.Song
-import code.name.monkey.retromusic.repository.RealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
+import pj.tdk.musicplayer.R
+import pj.tdk.musicplayer.models.Song
+import pj.tdk.musicplayer.repository.RealRepository
 
 object SongsMenuHelper : KoinComponent {
     fun handleMenuClick(

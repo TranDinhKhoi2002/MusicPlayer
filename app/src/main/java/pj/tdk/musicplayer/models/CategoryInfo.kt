@@ -36,8 +36,8 @@ data class CategoryInfo(
         Albums(R.id.action_album, R.string.albums, R.drawable.asld_album),
         Artists(R.id.action_artist, R.string.artists, R.drawable.asld_artist),
         Playlists(R.id.action_playlist, R.string.playlists, R.drawable.asld_playlist),
-        Genres(R.id.action_genre, R.string.genres, R.drawable.asld_guitar),
-        Folder(R.id.action_folder, R.string.folders, R.drawable.asld_folder),
-        Search(R.id.action_search, R.string.action_search, R.drawable.ic_search);
+//        Genres(R.id.action_genre, R.string.genres, R.drawable.asld_guitar),
+//        Folder(R.id.action_folder, R.string.folders, R.drawable.asld_folder),
+//        Search(R.id.action_search, R.string.action_search, R.drawable.ic_search);
     }
 }

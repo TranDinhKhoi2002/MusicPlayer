@@ -24,11 +24,7 @@ import android.os.IBinder
 import android.provider.DocumentsContract
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.model.Song
-import code.name.monkey.retromusic.repository.SongRepository
 import code.name.monkey.retromusic.service.MusicService
-import code.name.monkey.retromusic.util.PreferenceUtil
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import pj.tdk.musicplayer.R
