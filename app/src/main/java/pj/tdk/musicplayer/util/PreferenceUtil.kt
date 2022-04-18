@@ -5,12 +5,11 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.preference.PreferenceManager
 import androidx.core.content.edit
-import androidx.preference.PreferenceManager
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.*
-import code.name.monkey.retromusic.extensions.getIntRes
-import code.name.monkey.retromusic.extensions.getStringOrDefault
+import pj.tdk.musicplayer.extensions.getIntRes
+import pj.tdk.musicplayer.extensions.getStringOrDefault
 import code.name.monkey.retromusic.fragments.AlbumCoverStyle
 import code.name.monkey.retromusic.fragments.GridStyle
 import code.name.monkey.retromusic.fragments.NowPlayingScreen

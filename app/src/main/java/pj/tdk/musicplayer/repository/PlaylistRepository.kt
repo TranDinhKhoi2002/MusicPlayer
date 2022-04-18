@@ -20,7 +20,7 @@ import android.provider.BaseColumns
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Playlists.*
 import android.provider.MediaStore.Audio.PlaylistsColumns
-import code.name.monkey.retromusic.extensions.getStringOrNull
+import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.Constants
 import pj.tdk.musicplayer.models.Playlist
 import pj.tdk.musicplayer.models.PlaylistSong

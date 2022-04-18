@@ -22,7 +22,7 @@ import android.provider.MediaStore
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Media
 import code.name.monkey.appthemehelper.util.VersionUtils
-import code.name.monkey.retromusic.extensions.getStringOrNull
+import pj.tdk.musicplayer.extensions.getStringOrNull
 import code.name.monkey.retromusic.providers.BlacklistStore
 import pj.tdk.musicplayer.Constants.IS_MUSICs
 import pj.tdk.musicplayer.Constants.baseProjection

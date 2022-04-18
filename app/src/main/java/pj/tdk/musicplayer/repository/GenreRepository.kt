@@ -19,7 +19,7 @@ import android.database.Cursor
 import android.provider.BaseColumns
 import android.provider.MediaStore.Audio.AudioColumns.IS_MUSIC
 import android.provider.MediaStore.Audio.Genres
-import code.name.monkey.retromusic.extensions.getStringOrNull
+import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.Constants.baseProjection
 import pj.tdk.musicplayer.models.Genre
 import pj.tdk.musicplayer.models.Song

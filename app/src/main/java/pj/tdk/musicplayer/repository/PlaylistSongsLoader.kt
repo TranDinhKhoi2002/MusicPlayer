@@ -18,7 +18,7 @@ import android.content.Context
 import android.database.Cursor
 import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Playlists.Members
-import code.name.monkey.retromusic.extensions.getStringOrNull
+import pj.tdk.musicplayer.extensions.getStringOrNull
 import pj.tdk.musicplayer.Constants.IS_MUSICs
 import pj.tdk.musicplayer.models.AbsCustomPlaylist
 import pj.tdk.musicplayer.models.Playlist
