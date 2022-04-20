@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import pj.tdk.musicplayer.adapters.SongsAdapter
 import pj.tdk.musicplayer.databinding.ActivityMainBinding
 import pj.tdk.musicplayer.objects.SongList
-import android.R
 import android.view.View
 import androidx.core.content.ContentProviderCompat
 
